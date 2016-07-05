@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1454174496"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq -Fi/home/freeman/Project/lazarus/TGBP/lib/i386-linux -Fu/home/freeman/Project/lazarus/TGBP/ -FU/home/freeman/Project/lazarus/TGBP/lib/i386-linux/ -omybot_exe tgbp.lpr"/>
+</CONFIG>
