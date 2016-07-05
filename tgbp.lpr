@@ -6,8 +6,12 @@ uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
-  Classes, SysUtils, CustApp
-  { you can add units after this };
+  Classes, SysUtils, CustApp,
+  fpjson,
+  jsonparser,
+  inifiles,
+  dateutils,
+  Process;
 
 type
 
