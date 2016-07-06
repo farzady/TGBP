@@ -8,20 +8,14 @@
         <Filename Value="tgbp.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="26" Y="26"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="34" Y="34"/>
         <UsageCount Value="20"/>
-        <Loaded Value="True"/>
       </Unit0>
     </Units>
-    <JumpHistory Count="2" HistoryIndex="1">
-      <Position1>
-        <Filename Value="tgbp.lpr"/>
-        <Caret Line="29" Column="25" TopLine="45"/>
-      </Position1>
-      <Position2>
-        <Filename Value="tgbp.lpr"/>
-        <Caret Line="32" TopLine="8"/>
-      </Position2>
-    </JumpHistory>
+    <General>
+      <ActiveWindowIndexAtStart Value="-1"/>
+    </General>
+    <JumpHistory HistoryIndex="-1"/>
   </ProjectSession>
 </CONFIG>
