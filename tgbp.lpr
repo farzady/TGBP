@@ -13,7 +13,7 @@ uses {$IFDEF UNIX} {$IFDEF UseCThreads}
   dateutils,
   Process,
   // internal classes
-  uKeyboardCls;
+  uKeyboardCls, uOtherFunctions;
 
 type
 
@@ -64,37 +64,6 @@ var
 
 
 
-  function sHTTPEncode(const AStr: string): string;
-  const
-    NoConversion = ['A'..'Z', 'a'..'z', '*', '@', '.', '_', ';', '-',
-      '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-  var
-    Sp, Rp: PChar;
-
-  begin
-
-    SetLength(Result, Length(AStr) * 3);
-    Sp := PChar(AStr);
-    Rp := PChar(Result);
-    while Sp^ <> #0 do
-    begin
-      if Sp^ in NoConversion then
-        Rp^ := Sp^
-      else if Sp^ = ' ' then
-        Rp^ := '+'
-      else
-      begin
-        FormatBuf(Rp^, 3, '%%%.2x', 6, [Ord(Sp^)]);
-        Inc(Rp, 2);
-      end;
-      Inc(Rp);
-      Inc(Sp);
-    end;
-    SetLength(Result, Rp - PChar(Result));
-  end;
-
-
-
 
   procedure TTgBotSKD.DoRun;
   var
@@ -126,7 +95,8 @@ var
   constructor TTgBotSKD.Create(TheOwner: TComponent);
   begin
     inherited Create(TheOwner);
-
+    //ini := TIniFile.Create();
+    WriteLn(GetAppDir());
   end;
 
   destructor TTgBotSKD.Destroy;
