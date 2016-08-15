@@ -45,6 +45,9 @@ type
     constructor Create(TheOwner: TComponent); override;
     destructor Destroy; override;
     procedure WriteHelp; virtual;
+  private
+    function HttpGetBinaryEx(url: string; var mem: TMemoryStream): boolean;
+    function BotInit(): boolean;
   end;
 
   { TTgBotSKD }
@@ -61,7 +64,9 @@ var
   ini: tinifile;
   StepStore: array of Steping;
   BOT_TOKKEN,URL_REQ: String;
-
+  mstr: tmemorystream;
+  JsonDoc: TJSONObject;
+  JsonParsera: TJSONParser;
 
 
 
@@ -88,6 +93,8 @@ var
     end;
 
     { add your program here }
+
+    BotInit();
 
     // stop program loop
     Terminate;
@@ -117,6 +124,52 @@ var
     { add your help code here }
     writeln('Usage: ', ExeName, ' -h');
   end;
+
+function TTgBotSKD.HttpGetBinaryEx(url: string; var mem: TMemoryStream): boolean;
+  var
+    r: string;
+  begin
+    //WriteLn('/usr/bin/curl',['-o',ExtractFileDir(ExeName)+'/catch',url]);
+    if RunCommand('/usr/bin/curl', ['-o', ExtractFileDir(ExeName) +
+      '/catch', url, '-H',
+      'Content-Type: application/x-www-form-urlencoded; charset: UTF-8'],
+      r) then
+    begin
+      mem.LoadFromFile(ExtractFileDir(ExeName) + '/catch');
+    end;
+    Result := True;
+  end;
+
+
+function TTgBotSKD.BotInit(): boolean;
+
+  begin
+    mstr := TMemoryStream.Create;
+    try
+      if HttpGetBinaryEx(URL_REQ + 'getMe', mstr) then
+      begin
+        mstr.position := 0;
+        JsonParsera := TJSONParser.Create(mstr);
+        JsonDoc := TJSONObject(JsonParsera.Parse);
+
+        if jsonDoc.findpath('ok').AsBoolean then
+        begin
+          WriteLn('@' + jsonDoc.findpath('result.username').AsString);
+        end;
+      end
+      else
+      begin
+        WriteLn('cant init bot...');
+        halt(0);
+      end;
+
+    finally
+      //HTTPClient.Free
+    end;
+    Result := True;
+
+  end;
+
 
 var
   Application: TTgBotSKD;
