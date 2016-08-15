@@ -11,7 +11,9 @@ uses {$IFDEF UNIX} {$IFDEF UseCThreads}
   jsonparser,
   inifiles,
   dateutils,
-  Process;
+  Process,
+  // internal classes
+  uKeyboardCls;
 
 type
 
