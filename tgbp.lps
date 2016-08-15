@@ -7,8 +7,9 @@
       <Unit0>
         <Filename Value="tgbp.lpr"/>
         <IsPartOfProject Value="True"/>
-        <TopLine Value="84"/>
-        <CursorPos X="25" Y="107"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="85"/>
+        <CursorPos X="54" Y="99"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -24,9 +25,8 @@
       <Unit2>
         <Filename Value="uOtherFunctions.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="13" Y="19"/>
+        <CursorPos X="54" Y="22"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit2>

@@ -60,6 +60,7 @@ var
   cback: TStringStream;
   ini: tinifile;
   StepStore: array of Steping;
+  BOT_TOKKEN,URL_REQ: String;
 
 
 
@@ -95,8 +96,15 @@ var
   constructor TTgBotSKD.Create(TheOwner: TComponent);
   begin
     inherited Create(TheOwner);
-    //ini := TIniFile.Create();
-    WriteLn(GetAppDir());
+    ini := TIniFile.Create(GetAppDir()+'/config.ini');
+    { // init ini file
+    ini.WriteString('APP','TOKKEN','123xxxxxxxx');
+    ini.WriteString('APP','LAST_MESSAGE','0');
+    // end init ini file }
+    BOT_TOKKEN:=ini.ReadString('APP','TOKKEN','');
+    URL_REQ :=  'https://api.telegram.org/bot' + BOT_TOKKEN + '/';
+
+
   end;
 
   destructor TTgBotSKD.Destroy;
