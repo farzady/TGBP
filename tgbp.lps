@@ -3,63 +3,56 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="3">
+    <Units Count="6">
       <Unit0>
         <Filename Value="tgbp.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="116"/>
-        <CursorPos Y="132"/>
-        <UsageCount Value="22"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="118"/>
+        <CursorPos X="49" Y="128"/>
+        <UsageCount Value="23"/>
       </Unit0>
       <Unit1>
         <Filename Value="uKeyboardCls.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="49"/>
+        <CursorPos X="40" Y="47"/>
+        <UsageCount Value="23"/>
       </Unit1>
       <Unit2>
         <Filename Value="uOtherFunctions.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="22"/>
-        <CursorPos X="9" Y="50"/>
-        <UsageCount Value="22"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="10"/>
+        <CursorPos X="20" Y="8"/>
+        <UsageCount Value="23"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="uFileCls.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="28" Y="8"/>
+        <UsageCount Value="10"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="/usr/share/fpcsrc/3.0.0/packages/fcl-process/src/process.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="167"/>
+        <CursorPos X="10" Y="181"/>
+        <UsageCount Value="10"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="/usr/share/fpcsrc/3.0.0/rtl/objpas/classes/classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="951"/>
+        <CursorPos X="3" Y="965"/>
+        <UsageCount Value="10"/>
+      </Unit5>
     </Units>
-    <JumpHistory Count="4" HistoryIndex="3">
-      <Position1>
-        <Filename Value="tgbp.lpr"/>
-        <Caret Line="119" Column="11" TopLine="94"/>
-      </Position1>
-      <Position2>
-        <Filename Value="tgbp.lpr"/>
-        <Caret Line="95" Column="15" TopLine="70"/>
-      </Position2>
-      <Position3>
-        <Filename Value="tgbp.lpr"/>
-        <Caret Line="67" Column="3" TopLine="119"/>
-      </Position3>
-      <Position4>
-        <Filename Value="tgbp.lpr"/>
-        <Caret Line="162" TopLine="143"/>
-      </Position4>
-    </JumpHistory>
+    <General>
+      <ActiveWindowIndexAtStart Value="-1"/>
+    </General>
+    <JumpHistory HistoryIndex="-1"/>
   </ProjectSession>
-  <Debugging>
-    <BreakPoints Count="1">
-      <Item1>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="tgbp.lpr"/>
-        <Line Value="132"/>
-      </Item1>
-    </BreakPoints>
-  </Debugging>
 </CONFIG>

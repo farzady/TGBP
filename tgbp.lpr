@@ -13,7 +13,7 @@ uses {$IFDEF UNIX} {$IFDEF UseCThreads}
   dateutils,
   Process,
   // internal classes
-  uKeyboardCls, uOtherFunctions;
+  uKeyboardCls, uOtherFunctions, uFileCls;
 
 type
 
